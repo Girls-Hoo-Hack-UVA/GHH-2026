@@ -8,21 +8,25 @@ import Statistics from './sections/Statistics/Statistics'
 import Sponsors from './sections/Sponsors/Sponsors'
 import Team from './sections/Team/Team'
 import Contact from './sections/Contact/Contact'
+import Background from './sections/Background'
 
 function App() {
   return (
-    <main>
-      <Home />
-      <WhatIsGHH />
-      <Schedule />
-      <FAQ />
-      <About />
-      <Mission />
-      <Statistics />
-      <Sponsors />
-      <Team />
-      <Contact />
-    </main>
+    <div className="page-shell">
+      <Background />
+      <div className="content">
+        <Home />
+        <WhatIsGHH />
+        <Schedule />
+        <FAQ />
+        <About />
+        <Mission />
+        <Statistics />
+        <Sponsors />
+        <Team />
+        <Contact />
+      </div>
+    </div>
   )
 }
 
