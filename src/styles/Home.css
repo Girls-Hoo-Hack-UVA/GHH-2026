@@ -63,3 +63,12 @@
     align-items: flex-end; /* Aligns text to the right */
     margin-right: 70px;
 }
+
+.date-text {
+    position: relative;
+    top: 22vh;
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5vh;
+    margin-right: auto;
+    margin-left: auto;
+}

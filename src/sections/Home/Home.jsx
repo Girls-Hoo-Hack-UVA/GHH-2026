@@ -7,6 +7,8 @@ function Home() {
   return (
     <section className="section" id="home">
 
+      <p className="date-text">October 17-18, 2026 · Charlottesville, VA</p>
+
       <div className="home-container">
         <div className="image-row">
           <img src={Hack} className="hack-text" alt="Hack" />
