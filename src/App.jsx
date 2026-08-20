@@ -9,11 +9,13 @@ import Sponsors from './sections/Sponsors/Sponsors'
 import Team from './sections/Team/Team'
 import Contact from './sections/Contact/Contact'
 import Background from './sections/Background'
+import MusicPlayer from './components/MusicPlayer'
 
 function App() {
   return (
     <div className="page-shell">
       <Background />
+      <MusicPlayer />
       <div className="content">
         <Home />
         <WhatIsGHH />
