@@ -1,0 +1,65 @@
+@import url('https://googleapis.com');
+
+#home {
+  padding: 0;
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between; /* Pushes images to left, center, and right */
+  align-items: center;            /* Vertically centers them if heights differ */
+  width: 100%;                  /* Ensures container spans the full page width */
+  transform: translateY(-400px);
+}
+
+.hack-text {
+  width: 1100px;
+  position: relative;
+  left: -250px;
+  top: 100px;
+}
+
+.tothe-text {
+   width: 400px;
+   position: relative;
+   left: -640px;
+   top: 40px;
+}
+
+.moon-text {
+  width: 1100px;
+  position: relative;
+  right: 910px;
+  top: 130px;
+}
+
+.text-row {
+  display: flex;
+  flex-direction: row;           /* Arranges text in a horizontal line */
+  justify-content: space-between; /* Pushes text to left, center, and right */
+  align-items: center;            /* Vertically centers them if heights differ */
+  width: 100%;                  /* Ensures container spans the full page width */
+  transform: translateY(-820px);
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  color: white;
+}
+
+.GHH2026-text {
+    position: relative;
+    left: 70px;
+}
+
+.right-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns text to the right */
+    margin-right: 70px;
+}
