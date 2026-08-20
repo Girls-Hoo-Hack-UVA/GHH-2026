@@ -9,10 +9,12 @@ import Sponsors from './sections/Sponsors/Sponsors'
 import Team from './sections/Team/Team'
 import Contact from './sections/Contact/Contact'
 import Background from './sections/Background'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   return (
     <div className="page-shell">
+      <Navbar />
       <Background />
       <div className="content">
         <Home />

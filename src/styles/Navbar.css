@@ -1,0 +1,143 @@
+@import url('https://googleapis.com');
+
+:root {
+    --navbar-height: 90px;
+    --spacing-xl: 24px;
+    --container-width: 1200px;
+}
+
+.navbar-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: var(--navbar-height);
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    color: var(--text-color);
+
+    background: transparent;
+
+    transition:
+        background-color 0.3s ease,
+        backdrop-filter 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar-content.scrolled {
+    background: rgba(7, 11, 16, 0.85);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 5.5%;
+    left: 5px;
+    top: -5px;
+    position: absolute;
+}
+
+.ghh-text {
+    width: 15%;
+    left: 45px;
+    top: -100px;
+    position: absolute;
+}
+
+.register-button {
+    padding: 11px 24px;
+    margin-left: auto;
+    margin-right: 0x;
+
+    border: 1px solid white;
+    border-radius: 999px;
+
+    background: white;
+    color: #070b10;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 17px;
+    font-weight: 1000;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.register-button:hover {
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 1),
+        0 0 25px rgba(255, 255, 255, 0.8),
+        0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+.mlh-badge {
+    position: fixed;
+    left: 50px;
+    top: 0;
+
+    display: block;
+
+    width: 10%;
+    max-width: 100px;
+    min-width: 60px;
+
+    z-index: 10000;
+}
+
+.mlh-badge img {
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    white-space: nowrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 400;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ee713b;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 16px rgba(255, 255, 255, 0.5);
+}
