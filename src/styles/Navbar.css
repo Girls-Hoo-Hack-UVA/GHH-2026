@@ -122,6 +122,9 @@
 }
 
 .nav-links a {
+    position: relative;
+    display: inline-block;
+
     color: white;
     text-decoration: none;
 
@@ -134,10 +137,37 @@
         text-shadow 0.2s ease;
 }
 
+/* Individual underline for EACH word */
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ff8753;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 6px rgba(255, 135, 83, 0.9),
+        0 0 12px rgba(255, 135, 83, 0.6);
+
+    transition: width 0.25s ease;
+}
+
+/* Only the word you're hovering gets a line */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 .nav-links a:hover {
-    color: #ee713b;
+    color: #ff8753;
 
     text-shadow:
-        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 8px rgba(255, 170, 114, 0.8),
         0 0 16px rgba(255, 255, 255, 0.5);
 }
