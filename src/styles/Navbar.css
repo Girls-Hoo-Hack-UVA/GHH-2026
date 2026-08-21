@@ -10,20 +10,15 @@
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: var(--navbar-height);
-
     z-index: 1000;
-
     display: flex;
     align-items: center;
-
     padding: 0 40px;
     box-sizing: border-box;
 
     color: var(--text-color);
-
     background: transparent;
 
     transition:
@@ -34,10 +29,8 @@
 
 .navbar-content.scrolled {
     background: rgba(7, 11, 16, 0.85);
-
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -65,7 +58,6 @@
 
     background: white;
     color: #070b10;
-
     font-family: 'Space Mono', monospace;
     font-size: 17px;
     font-weight: 1000;
@@ -99,7 +91,6 @@
     width: 10%;
     max-width: 100px;
     min-width: 60px;
-
     z-index: 10000;
 }
 
@@ -113,21 +104,17 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
     display: flex;
     align-items: center;
     gap: 28px;
-
     white-space: nowrap;
 }
 
 .nav-links a {
     position: relative;
     display: inline-block;
-
     color: white;
     text-decoration: none;
-
     font-family: 'Space Mono', monospace;
     font-size: 22px;
     font-weight: 400;
@@ -137,17 +124,14 @@
         text-shadow 0.2s ease;
 }
 
-/* Individual underline for EACH word */
+/* underlines */
 .nav-links a::after {
     content: "";
-
     position: absolute;
     left: 50%;
     bottom: -7px;
-
     width: 0;
     height: 2px;
-
     background: #ff8753;
 
     transform: translateX(-50%);
@@ -159,14 +143,12 @@
     transition: width 0.25s ease;
 }
 
-/* Only the word you're hovering gets a line */
 .nav-links a:hover::after {
     width: 100%;
 }
 
 .nav-links a:hover {
     color: #ff8753;
-
     text-shadow:
         0 0 8px rgba(255, 170, 114, 0.8),
         0 0 16px rgba(255, 255, 255, 0.5);
