@@ -1,0 +1,34 @@
+@import url('https://googleapis.com');
+
+.footer {
+    background-color: #05060c;
+    text-align: center;
+    outline: 1px solid #23294e;
+    width: 100%;
+    height: 30vh;
+    font-family: 'Space Mono', monospace;
+    overflow: hidden;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-logo-image {
+    position: relative;
+    width: 8vw;
+    height: auto;
+    left: 12.5vw;
+    margin-top: -20.5vh;
+}
+
+.footer-text-logo {
+    position: relative;
+    width: 18vw;
+    left: 8vw;
+    height: auto;
+    margin-top: -13vh;
+}
