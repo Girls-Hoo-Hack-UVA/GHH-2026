@@ -13,9 +13,9 @@
 
 .image-row {
   display: flex;
-  justify-content: space-between; /* Pushes images to left, center, and right */
-  align-items: center;            /* Vertically centers them if heights differ */
-  width: 100%;                  /* Ensures container spans the full page width */
+  justify-content: space-between; 
+  align-items: center;            
+  width: 100%;                  
   transform: translateY(-400px);
 }
 
@@ -42,10 +42,10 @@
 
 .text-row {
   display: flex;
-  flex-direction: row;           /* Arranges text in a horizontal line */
-  justify-content: space-between; /* Pushes text to left, center, and right */
-  align-items: center;            /* Vertically centers them if heights differ */
-  width: 100%;                  /* Ensures container spans the full page width */
+  flex-direction: row;           
+  justify-content: space-between; 
+  align-items: center;            
+  width: 100%;                
   transform: translateY(-820px);
   font-family: 'Space Mono', monospace;
   font-size: 20px;
@@ -60,7 +60,7 @@
 .right-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns text to the right */
+    align-items: flex-end; 
     margin-right: 70px;
 }
 
