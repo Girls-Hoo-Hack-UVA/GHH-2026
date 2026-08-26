@@ -1,0 +1,30 @@
+.music-player {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 50;
+}
+
+.music-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  opacity: 0.5;
+}
+
+.music-toggle:hover,
+.music-toggle:focus-visible {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.4);
+}

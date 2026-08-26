@@ -10,12 +10,14 @@ import Team from './sections/Team/Team'
 import Contact from './sections/Contact/Contact'
 import Background from './sections/Background'
 import Navbar from './components/Navbar/Navbar'
+import MusicPlayer from './components/MusicPlayer'
 
 function App() {
   return (
     <div className="page-shell">
       <Navbar />
       <Background />
+      <MusicPlayer />
       <div className="content">
         <Home />
         <WhatIsGHH />
