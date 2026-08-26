@@ -2,4 +2,7 @@
   --color-background: #111111;
   --color-text: #ffffff;
   --font-sans: Arial, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --color-pink-glow: #ff2e9a;
+  --color-pink-glow-soft: rgba(255, 46, 154, 0.55);
 }

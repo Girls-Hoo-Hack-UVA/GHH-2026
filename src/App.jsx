@@ -11,10 +11,12 @@ import Contact from './sections/Contact/Contact'
 import Background from './sections/Background'
 import Navbar from './components/Navbar/Navbar'
 import MusicPlayer from './components/MusicPlayer'
+import TerminalIntro from './components/TerminalIntro/TerminalIntro'
 
 function App() {
   return (
     <div className="page-shell">
+      <TerminalIntro />
       <Navbar />
       <Background />
       <MusicPlayer />
