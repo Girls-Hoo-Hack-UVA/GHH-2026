@@ -2,6 +2,7 @@
 
 #home {
   padding: 0;
+  position: relative;
 }
 
 .home-container {
@@ -71,4 +72,13 @@
     font-size: 2.5vh;
     margin-right: auto;
     margin-left: auto;
+}
+
+.moon-picture {
+    position: absolute;
+    top: 35vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: auto;
 }

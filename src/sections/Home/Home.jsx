@@ -1,6 +1,7 @@
 import Hack from "./assets/hack.svg"
 import Tothe from "./assets/tothe.svg"
 import Moon from "./assets/moon.svg"
+import MoonPic from "./assets/moonpic.svg"
 import "../../styles/Home.css";
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
               <p className="annual-text">annual hackathon</p>
             </div>
       </div>
+      <img src={MoonPic} alt="Moon-Picture" className="moon-picture" />
       
     </section>
   )
