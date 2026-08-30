@@ -1,0 +1,170 @@
+@import url('https://googleapis.com');
+
+:root {
+    --navbar-height: 90px;
+    --spacing-xl: 24px;
+    --container-width: 1200px;
+}
+
+.navbar-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navbar-height);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    color: var(--text-color);
+    background: transparent;
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease,
+        background-color 0.3s ease,
+        backdrop-filter 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar-content.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar-hover-zone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    z-index: 999;
+}
+
+.logo {
+    width: 5.5%;
+    left: 5px;
+    top: -5px;
+    position: absolute;
+}
+
+.ghh-text {
+    width: 15%;
+    left: 45px;
+    top: -100px;
+    position: absolute;
+}
+
+.register-button {
+    padding: 11px 24px;
+    margin-left: auto;
+    margin-right: 0x;
+
+    border: 1px solid white;
+    border-radius: 999px;
+
+    background: white;
+    color: #070b10;
+    font-family: 'Space Mono', monospace;
+    font-size: 17px;
+    font-weight: 1000;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.register-button:hover {
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 1),
+        0 0 25px rgba(255, 255, 255, 0.8),
+        0 0 50px rgba(255, 255, 255, 0.5);
+}
+
+.mlh-badge {
+    position: absolute;
+    left: 50px;
+    top: 0;
+
+    display: block;
+
+    width: 10%;
+    max-width: 100px;
+    min-width: 60px;
+
+    z-index: 1;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.mlh-badge img {
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 22px;
+    font-weight: 400;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
+}
+
+/* underlines */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #ff8753;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 6px rgba(255, 135, 83, 0.9),
+        0 0 12px rgba(255, 135, 83, 0.6);
+
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #ff8753;
+    text-shadow:
+        0 0 8px rgba(255, 170, 114, 0.8),
+        0 0 16px rgba(255, 255, 255, 0.5);
+}

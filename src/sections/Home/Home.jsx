@@ -1,7 +1,7 @@
 function Home() {
   return (
     <section className="section" id="home">
-      <h1>Home page</h1>
+      <h1>Home</h1>
       <p>Placeholder</p>
     </section>
   )
