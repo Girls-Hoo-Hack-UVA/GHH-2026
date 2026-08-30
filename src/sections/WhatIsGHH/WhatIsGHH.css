@@ -1,0 +1,123 @@
+.what-is-ghh {
+    position: relative;
+    min-height: 100vh;
+    padding: 9rem 6vw 7rem;
+    overflow: hidden;
+    color: #fff;
+}
+
+.ghh-content {
+    position: relative;
+    z-index: 2;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.ghh-heading-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+    gap: 2rem;
+    align-items: end;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.ghh-heading-row h1 {
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(3.6rem, 7.5vw, 7.4rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+}
+
+.ghh-heading-row h1 span {
+    color: #ff8753;
+    text-shadow:
+        0 0 18px rgba(255, 135, 83, 0.4),
+        0 0 42px rgba(255, 135, 83, 0.16);
+}
+
+.ghh-intro {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    line-height: 1.7;
+}
+
+.ghh-sections {
+    margin-top: 3rem;
+}
+
+.ghh-section {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.ghh-section h2 {
+    margin: 0;
+    color: #ff8753;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.ghh-section-copy p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.ghh-section-copy p+p {
+    margin-top: 1.25rem;
+}
+
+/* Decorative orbit graphics */
+
+.ghh-orbit {
+    position: absolute;
+    z-index: 1;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ghh-orbit::before,
+.ghh-orbit::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ghh-orbit::before {
+    inset: 42px;
+    border: 1px solid rgba(255, 135, 83, 0.1);
+}
+
+.ghh-orbit::after {
+    width: 7px;
+    height: 7px;
+    top: 37px;
+    left: 83px;
+    background: #ff8753;
+    box-shadow: 0 0 14px rgba(255, 135, 83, 0.9);
+}
+
+.ghh-orbit-left {
+    left: -280px;
+    top: 9%;
+}
+
+.ghh-orbit-right {
+    right: -300px;
+    bottom: 2%;
+}
