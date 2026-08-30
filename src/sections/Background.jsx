@@ -30,6 +30,12 @@ export default function Background() {
         color,
         opacity: Math.random() * 0.65 + 0.15,
         blur: Math.random() < 0.08 ? Math.random() * 1.5 : 0,
+
+        // ~8% of stars twinkle
+        twinkle: Math.random() < 0.08,
+
+        twinkleDuration: Math.random() * 3 + 2,
+        twinkleDelay: Math.random() * 5,
       };
     });
   }, []);
@@ -41,7 +47,7 @@ export default function Background() {
       {stars.map((star) => (
         <span
           key={star.id}
-          className="star"
+          className={`star ${star.twinkle ? "twinkle" : ""}`}
           style={{
             left: `${star.left}%`,
             top: `${star.top}%`,
@@ -50,6 +56,8 @@ export default function Background() {
             backgroundColor: star.color,
             opacity: star.opacity,
             filter: `blur(${star.blur}px)`,
+            animationDuration: `${star.twinkleDuration}s`,
+            animationDelay: `${star.twinkleDelay}s`,
           }}
         />
       ))}

@@ -11,7 +11,7 @@
         radial-gradient(circle at 75% 45%,
             rgba(20, 31, 43, 0.14),
             transparent 40%),
-        #070b10;
+        #090a0c;
 }
 
 .nebula {
@@ -31,4 +31,21 @@
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
+}
+
+.star.twinkle {
+    animation: twinkle ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
 }
