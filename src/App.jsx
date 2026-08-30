@@ -9,6 +9,7 @@ import Sponsors from './sections/Sponsors/Sponsors'
 import Team from './sections/Team/Team'
 import Contact from './sections/Contact/Contact'
 import Background from './sections/Background'
+import Footer from './sections/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Sponsors />
         <Team />
         <Contact />
+        <Footer />
       </div>
     </div>
   )
