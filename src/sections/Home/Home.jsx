@@ -1,5 +1,6 @@
 import HackToMoon from "./assets/fulltext.svg"
 import MoonPic from "./assets/moonpic.svg"
+import Hand from "./assets/hand.svg"
 import "../../styles/Home.css";
 
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
             </div>
       </div>
       <img src={MoonPic} alt="Moon-Picture" className="moon-picture" />
+        <img src={Hand} alt="Hand" className="hand-picture" />
       
     </section>
   )
