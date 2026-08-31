@@ -1,6 +1,4 @@
-import Hack from "./assets/hack.svg"
-import Tothe from "./assets/tothe.svg"
-import Moon from "./assets/moon.svg"
+import HackToMoon from "./assets/fulltext.svg"
 import MoonPic from "./assets/moonpic.svg"
 import "../../styles/Home.css";
 
@@ -10,12 +8,8 @@ function Home() {
 
       <p className="date-text">October 17-18, 2026 · Charlottesville, VA</p>
 
-      <div className="home-container">
-        <div className="image-row">
-          <img src={Hack} className="hack-text" alt="Hack" />
-          <img src={Tothe} className="tothe-text" alt="to the" />
-          <img src={Moon} className="moon-text" alt="Moon" />
-        </div>
+      <div className="image-row">
+        <img src={HackToMoon} alt="Hack to the Moon" />
       </div>
 
        <div className="text-row">
