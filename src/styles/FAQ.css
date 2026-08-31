@@ -1,9 +1,16 @@
 .faq-section {
-  padding: 0.5rem 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: clamp(0.75rem, 3.5vh, 3rem) 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: 'Space Mono', monospace;
 }
 
 .faq-section h1 {
+    margin: 0 0 clamp(0.25rem, 1.5vh, 1rem);
+    font-size: clamp(1.4rem, 5vh, 2rem);
     text-align: center;
     color: #ff8753;
     text-shadow:
@@ -13,11 +20,12 @@
 }
 
 .faq-list {
+  width: 100%;
   max-width: 750px;
-  margin: 0.5rem auto 0;
+  margin: clamp(0.75rem, 2.5vh, 2rem) auto 0;
   display: flex;
   flex-direction: column;
-  gap: 1.05rem;
+  gap: clamp(0.4rem, 1.1vh, 1.05rem);
   text-align: left;
 }
 
@@ -43,8 +51,8 @@
   border: none;
   color: var(--color-text);
   font-family: 'Space Mono', monospace;
-  font-size: 1rem;
-  padding: 1.1rem 1.4rem;
+  font-size: clamp(0.8rem, 1.6vh, 1rem);
+  padding: clamp(0.4rem, 1.3vh, 1.1rem) 1.4rem;
   cursor: pointer;
   text-align: left;
   transition: color 0.25s ease;
