@@ -4,6 +4,19 @@
     padding: 9rem 6vw 7rem;
     overflow: hidden;
     color: #fff;
+    isolation: isolate;
+}
+
+.what-is-ghh::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, transparent, #100f1f);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .ghh-content {
