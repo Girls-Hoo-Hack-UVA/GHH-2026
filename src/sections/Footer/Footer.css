@@ -2,8 +2,8 @@
     background-color: #05060c;
     outline: 1px solid #23294e;
     width: 100%;
-    min-height: 30vh;  
-    flex: 1 0 auto;     
+    min-height: 30vh;
+    flex: 1 0 auto;
     padding: 15px 8vw 0;
     box-sizing: border-box;
     font-family: 'Space Mono', monospace;
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -22,15 +23,19 @@
 .footer-logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
 }
 
 .footer-text-logo {
-    width: 180px;
+    padding-top: 10px;
+    width: 150px;
 }
 
 .footer-logo-image {
-    width: 80px;
-    margin-left: -20px;
+    width: 90px;
+    display: block;
 }
 
 .footer-contact {
@@ -52,7 +57,20 @@
     display: flex;
     justify-content: space-between;
     padding-top: 15px;
+    padding-bottom: 15px;
     border-top: 1px solid #23294e;
     font-size: 12px;
     opacity: 0.5;
+}
+
+.cio-statement p {
+    font-size: 12px;
+    margin: 0 90px 0;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.insta-icon {
+    margin: 8px 0 0;
+    font-size: large;
 }
