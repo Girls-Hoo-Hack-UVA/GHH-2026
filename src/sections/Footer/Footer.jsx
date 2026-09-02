@@ -32,7 +32,7 @@ function Footer() {
                     <a href="mailto:girlshoohack@gmail.com">
                         girlshoohack@gmail.com
                     </a>
-                    <InstagramIcon className='insta-icon' />
+                    <InstagramIcon className='insta-icon' onClick={() => window.open("https://www.instagram.com/girlshoohack/", "_blank")}/>
                 </div>
 
             </div>
