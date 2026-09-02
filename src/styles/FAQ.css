@@ -1,0 +1,100 @@
+.faq-section {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: clamp(0.75rem, 3.5vh, 3rem) 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+}
+
+.faq-section h1 {
+    margin: 0 0 clamp(0.25rem, 1.5vh, 1rem);
+    font-size: clamp(1.4rem, 5vh, 2rem);
+    text-align: center;
+    color: #ff8753;
+    text-shadow:
+      0 0 8px rgba(255, 135, 83, 0.65),
+      0 0 20px rgba(255, 135, 83, 0.5),
+      0 0 45px rgba(255, 135, 83, 0.3);
+}
+
+.faq-list {
+  width: 100%;
+  max-width: 750px;
+  margin: clamp(0.75rem, 2.5vh, 2rem) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.4rem, 1.1vh, 1.05rem);
+  text-align: left;
+}
+
+.faq-item {
+  border: 1px solid #4a3a33;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow:
+    0 0 18px rgba(255, 135, 83, 0.18),
+    0 0 44px rgba(255, 135, 83, 0.09);
+}
+.faq-item.open {
+  box-shadow:
+    0 0 24px rgba(255, 135, 83, 0.35),
+    0 0 64px rgba(255, 135, 83, 0.16);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(0.8rem, 1.6vh, 1rem);
+  padding: clamp(0.4rem, 1.3vh, 1.1rem) 1.4rem;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.25s ease;
+}
+
+.faq-item.open .faq-question {
+  color: #ff8753;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.4rem;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 220px;
+  padding: 0 1.4rem 1.2rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.faq-answer a {
+  color: #8fb8ff;
+  text-decoration: underline;
+}
+
+.faq-answer a:hover {
+  color: #b3d0ff;
+}
