@@ -1,6 +1,7 @@
 import Logo from './assets/GHHLogo.png';
-import Textlogo from './assets/GHHTextLogo.svg';
-import "../../styles/Footer.css";
+import Textlogo from './assets/icon-1.svg';
+import "./Footer.css";
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 function Footer() {
     return (
@@ -21,12 +22,17 @@ function Footer() {
                     />
                 </div>
 
+                <div className='cio-statement'>
+                    <p>Girls Who Code at UVA is compliant provided that we do not discriminate in membership or participation in events on the basis of "age, color, disability, gender identity or expression, marital status, military status (including active-duty service members, reserve service members, and dependents), national or ethnic origin, political affiliation, pregnancy, race, religion, sex, sexual orientation, veteran status, and family medical or genetic information.</p>
+                </div>
+
 
                 <div className="footer-contact">
                     <p>questions?</p>
                     <a href="mailto:girlshoohack@gmail.com">
                         girlshoohack@gmail.com
                     </a>
+                    <InstagramIcon className='insta-icon' onClick={() => window.open("https://www.instagram.com/girlshoohack/", "_blank")}/>
                 </div>
 
             </div>
