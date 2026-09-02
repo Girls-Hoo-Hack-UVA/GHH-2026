@@ -79,10 +79,10 @@ function Navbar() {
                 <div className="nav-links">
                     <a href="#home">home</a>
                     <a href="#what-is-ghh">about</a>
-                    <a href="#schedule">schedule</a>
+                    <a href="#holder">schedule</a>
                     <a href="#faq">faq</a>
-                    <a href="#sponsors">sponsors</a>
-                    <a href="#contact">contact</a>
+                    <a href="#holder">sponsors</a>
+                    <a href="#footer">contact</a>
                 </div>
 
                 <button

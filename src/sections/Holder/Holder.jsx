@@ -2,7 +2,7 @@ import './Holder.css'
 
 function Holder() {
     return (
-        <section className="schedule-sponsors" id="schedule-sponsors">
+        <section className="schedule-sponsors" id="holder">
             <div className="schedule-sponsors-content">
 
                 <h1>
