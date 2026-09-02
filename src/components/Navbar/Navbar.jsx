@@ -85,7 +85,12 @@ function Navbar() {
                     <a href="#contact">contact</a>
                 </div>
 
-                <button className="register-button">register</button>
+                <button
+                    className="register-button"
+                    onClick={() => window.open("https://forms.gle/tE3B1rNGGu2qV4Pm9", "_blank")}
+                >
+                    register
+                </button>
             </nav>
         </>
     );
