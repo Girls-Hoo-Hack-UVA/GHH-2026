@@ -5,6 +5,7 @@ import girlshoohack from "./assets/girlshoohack.svg";
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 10);
@@ -14,6 +15,10 @@ function Navbar() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    function closeMenu() {
+        setMenuOpen(false);
+    }
 
     return (
         <nav className={`navbar-content ${scrolled ? "scrolled" : ""}`}>
@@ -27,18 +32,29 @@ function Navbar() {
                 className="mlh-badge"
             >
                 <img
-                    src="https://logged-assets.s3.amazonaws.com/trust-badge/2027/mlh-trust-badge-2027-white.svg" 
+                    src="https://logged-assets.s3.amazonaws.com/trust-badge/2027/mlh-trust-badge-2027-white.svg"
                     alt="Major League Hacking Trust Badge"
                 />
             </a>
 
-            <div className="nav-links">
-                <a href="#home">home</a>
-                <a href="#what-is-ghh">about</a>
-                <a href="#schedule">schedule</a>
-                <a href="#faq">faq</a>
-                <a href="#sponsors">sponsors</a>
-                <a href="#contact">contact</a>
+            <button
+                className={`nav-toggle ${menuOpen ? "open" : ""}`}
+                aria-label="Toggle navigation menu"
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen((open) => !open)}
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+                <a href="#home" onClick={closeMenu}>home</a>
+                <a href="#what-is-ghh" onClick={closeMenu}>about</a>
+                <a href="#schedule" onClick={closeMenu}>schedule</a>
+                <a href="#faq" onClick={closeMenu}>faq</a>
+                <a href="#sponsors" onClick={closeMenu}>sponsors</a>
+                <a href="#contact" onClick={closeMenu}>contact</a>
             </div>
 
             <button className="register-button">register</button>
