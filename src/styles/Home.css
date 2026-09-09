@@ -9,24 +9,23 @@
 }
 
 
-.image-row {
+.hack-to-moon-desktop {
   position: absolute;
   width: 145%;
+  height: auto;
+  max-width: none;
   left: 50%;
   transform: translateX(-50%);
   top: -39vw;
   overflow: hidden;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-
 }
 
-.image-row img {
-  width: 100%;
-  height: auto;
-  max-width: none;
-  display: block;
+
+.hack-to-moon-mobile {
+  display: none;
 }
 
 .text-row {
@@ -100,3 +99,42 @@ body::after {
   pointer-events: none;
   z-index: 9999;
 }
+
+
+@media (max-width: 480px) {
+  .hack-to-moon-mobile {
+    display: block;
+    position: absolute;
+    width: 170%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0vh;
+  }
+
+  .hack-to-moon-desktop {
+    display: none;
+  }
+
+  .text-row {
+    top: 70vh;
+    padding: 0 2vw;
+    font-size: clamp(12px, 2.5vh, 20px);
+  }
+
+  .moon-picture {
+    top: 30vh;
+    width: 60%;
+  }
+
+  .hand-picture {
+    top: 45vh;
+    left: 35%;
+    width: 50%;
+  }
+
+  .date-text {
+    top: -35vh;
+    font-size: clamp(10px, 1.4vh, 20px);
+  }
+}
+
