@@ -75,3 +75,30 @@
     font-size: large;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    .footer {
+        padding: 15px 6vw 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+
+    .cio-statement p {
+        margin: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

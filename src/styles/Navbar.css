@@ -168,3 +168,299 @@
         0 0 8px rgba(255, 170, 114, 0.8),
         0 0 16px rgba(255, 255, 255, 0.5);
 }
+
+
+/* =========================================================
+   MOBILE NAVBAR
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .navbar-content {
+        height: var(--mobile-navbar-height, 72px);
+        padding: 0 24px;
+
+        /* Keep the navbar itself transparent when closed */
+        background: transparent;
+
+        transition:
+            height 0.35s ease,
+            background-color 0.35s ease,
+            backdrop-filter 0.35s ease,
+            -webkit-backdrop-filter 0.35s ease,
+            box-shadow 0.35s ease;
+    }
+
+    /* ---------------------------------------------------------
+       MLH BADGE
+       --------------------------------------------------------- */
+
+    .mlh-badge {
+        left: 20px;
+        top: 0;
+
+        width: 65px;
+        min-width: 65px;
+        max-width: 65px;
+    }
+
+    .mlh-badge img {
+        width: 100%;
+    }
+
+    /* Hide desktop navigation */
+    .desktop-nav,
+    .desktop-register {
+        display: none;
+    }
+
+    /* ---------------------------------------------------------
+       HAMBURGER
+       --------------------------------------------------------- */
+
+    .menu-toggle {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+
+        width: 42px;
+        height: 42px;
+        padding: 0;
+
+        border: none;
+        background: transparent;
+        cursor: pointer;
+
+        transform: translateY(-50%);
+        z-index: 1002;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 27px;
+        height: 2px;
+
+        background: white;
+        border-radius: 999px;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.2s ease,
+            width 0.3s ease;
+    }
+
+    /* Turn hamburger into X */
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* ---------------------------------------------------------
+       EXPANDED NAVBAR
+       --------------------------------------------------------- */
+
+    /*
+       IMPORTANT:
+       The blur is applied to the ENTIRE navbar rather than
+       just .mobile-menu.
+
+       This prevents the header and dropdown from appearing
+       as two separate surfaces.
+    */
+
+    .navbar-content.menu-open {
+        height: 100vh;
+
+        background: rgba(7, 11, 16, 0.55);
+
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+
+        box-shadow: none;
+    }
+
+    /*
+       Keep the navbar contents above the blurred background.
+    */
+    .navbar-content>* {
+        z-index: 1001;
+    }
+
+    /* ---------------------------------------------------------
+       MOBILE MENU
+       --------------------------------------------------------- */
+
+    .mobile-menu {
+        position: absolute;
+        top: var(--mobile-navbar-height, 72px);
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: calc(100vh - var(--mobile-navbar-height, 72px));
+
+        padding: 40px 24px 50px;
+        box-sizing: border-box;
+
+        /*
+           IMPORTANT:
+           No background or backdrop-filter here.
+
+           The parent navbar provides the single uniform
+           blurred background.
+        */
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.25s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    .mobile-menu.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    /* ---------------------------------------------------------
+       MOBILE LINKS
+       --------------------------------------------------------- */
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+
+        gap: 26px;
+    }
+
+    .mobile-nav-links a {
+        position: relative;
+
+        color: white;
+        text-decoration: none;
+
+        font-family: 'Space Mono', monospace;
+        font-size: 28px;
+        font-weight: 400;
+
+        transition:
+            color 0.2s ease,
+            text-shadow 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .mobile-nav-links a::after {
+        content: "";
+
+        position: absolute;
+        left: 50%;
+        bottom: -7px;
+
+        width: 0;
+        height: 2px;
+
+        background: #ff8753;
+
+        transform: translateX(-50%);
+
+        box-shadow:
+            0 0 6px rgba(255, 135, 83, 0.9),
+            0 0 12px rgba(255, 135, 83, 0.6);
+
+        transition: width 0.25s ease;
+    }
+
+    .mobile-nav-links a:hover {
+        color: #ff8753;
+
+        text-shadow:
+            0 0 8px rgba(255, 170, 114, 0.8),
+            0 0 16px rgba(255, 255, 255, 0.5);
+
+        transform: translateY(-2px);
+    }
+
+    .mobile-nav-links a:hover::after {
+        width: 100%;
+    }
+
+    /* ---------------------------------------------------------
+       MOBILE REGISTER BUTTON
+       --------------------------------------------------------- */
+
+    .mobile-register {
+        margin: auto 0 0;
+
+        padding: 13px 32px;
+
+        font-size: 18px;
+    }
+}
+
+/* ---------------------------------------------------------
+   SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 500px) {
+    .navbar-content {
+        padding: 0 18px;
+    }
+
+    .mlh-badge {
+        left: 16px;
+        width: 58px;
+        min-width: 58px;
+        max-width: 58px;
+    }
+
+    .menu-toggle {
+        right: 18px;
+    }
+
+    .mobile-menu {
+        padding-top: 32px;
+    }
+
+    .mobile-nav-links {
+        gap: 22px;
+    }
+
+    .mobile-nav-links a {
+        font-size: 25px;
+    }
+}
