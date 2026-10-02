@@ -23,7 +23,7 @@ function App() {
         <FAQ />
         <Holder />
         {/* <Statistics /> */}
-        {/* <Sponsors /> */}
+        <Sponsors />
         {/* <Team /> */}
         {/* <Contact /> */}
         <Footer />

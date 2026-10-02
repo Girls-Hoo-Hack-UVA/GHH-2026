@@ -5,7 +5,6 @@ function Sponsors() {
   return (
     <section className="section" id="sponsors">
       <h1>Sponsors</h1>
-      <p>Placeholder</p>
 
       <div className="sponsors-special-thanks">
         <h2>Special Thanks</h2>
