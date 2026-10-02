@@ -1,0 +1,29 @@
+.sponsors-special-thanks {
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.sponsors-special-thanks h2 {
+    margin: 0;
+    color: #ff8753;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
+    text-transform: uppercase;
+}
+
+.sponsor-logo-link {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.sponsor-logo-link:hover {
+    transform: scale(1.04);
+}
+
+.sponsor-logo-link img {
+    display: block;
+    width: min(220px, 60vw);
+    height: auto;
+}
