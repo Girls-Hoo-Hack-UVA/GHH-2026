@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 #home {
   padding: 0;
@@ -9,24 +9,23 @@
 }
 
 
-.image-row {
+.hack-to-moon-desktop {
   position: absolute;
   width: 145%;
+  height: auto;
+  max-width: none;
   left: 50%;
   transform: translateX(-50%);
   top: -39vw;
   overflow: hidden;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-
 }
 
-.image-row img {
-  width: 100%;
-  height: auto;
-  max-width: none;
-  display: block;
+
+.hack-to-moon-mobile {
+  display: none;
 }
 
 .text-row {
@@ -100,3 +99,77 @@ body::after {
   pointer-events: none;
   z-index: 9999;
 }
+
+
+@media (max-width: 480px) {
+  .hack-to-moon-mobile {
+    display: block;
+    position: absolute;
+    width: 175vw;
+    left: 52%;
+    transform: translateX(-50%);
+    top: 0vh;
+  }
+
+  .hack-to-moon-desktop {
+    display: none;
+  }
+
+  .text-row {
+    top: 60vh;
+    padding: 0 4vw;
+    font-size: clamp(12px, 2.5vh, 20px);
+    color: #0c1014;
+    font-style: bold;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    text-align: center;
+  }
+
+  .GHH2026-text {
+    font-size: clamp(10px, 2vh, 20px);
+    text-align: center;
+    font-weight: 600;
+    color: #090a0c;
+    text-shadow:
+        0 0 18px #ffffff;
+  }
+
+  .moon-picture {
+    top: 25vh;
+    width: 200%;
+    z-index: -9999;
+  }
+
+  .hand-picture {
+    display: none;
+  }
+
+  .date-text {
+    top: -35vh;
+    font-size: clamp(10px, 1.4vh, 20px);
+  }
+
+  .seventh-text, .annual-text {
+    margin-left: 4vw;
+    margin-right: auto;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2.3rem, 7.5vw, 7.4rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #090a0c;
+    text-shadow:
+        0 0 18px #ffffff;
+  }
+
+  .right-text {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+}
+
