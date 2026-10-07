@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 #home {
   padding: 0;
@@ -105,8 +105,8 @@ body::after {
   .hack-to-moon-mobile {
     display: block;
     position: absolute;
-    width: 170%;
-    left: 50%;
+    width: 175vw;
+    left: 52%;
     transform: translateX(-50%);
     top: 0vh;
   }
@@ -116,25 +116,60 @@ body::after {
   }
 
   .text-row {
-    top: 70vh;
-    padding: 0 2vw;
+    top: 60vh;
+    padding: 0 4vw;
     font-size: clamp(12px, 2.5vh, 20px);
+    color: #0c1014;
+    font-style: bold;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    text-align: center;
+  }
+
+  .GHH2026-text {
+    font-size: clamp(10px, 2vh, 20px);
+    text-align: center;
+    font-weight: 600;
+    color: #090a0c;
+    text-shadow:
+        0 0 18px #ffffff;
   }
 
   .moon-picture {
-    top: 30vh;
-    width: 60%;
+    top: 25vh;
+    width: 200%;
+    z-index: -9999;
   }
 
   .hand-picture {
-    top: 45vh;
-    left: 35%;
-    width: 50%;
+    display: none;
   }
 
   .date-text {
     top: -35vh;
     font-size: clamp(10px, 1.4vh, 20px);
   }
+
+  .seventh-text, .annual-text {
+    margin-left: 4vw;
+    margin-right: auto;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2.3rem, 7.5vw, 7.4rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #090a0c;
+    text-shadow:
+        0 0 18px #ffffff;
+  }
+
+  .right-text {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
 }
 
