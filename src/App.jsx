@@ -21,9 +21,10 @@ function App() {
         <WhatIsGHH />
         {/* <Schedule /> */}
         <FAQ />
+        <Sponsors />
         <Holder />
         {/* <Statistics /> */}
-        <Sponsors />
+        
         {/* <Team /> */}
         {/* <Contact /> */}
         <Footer />
