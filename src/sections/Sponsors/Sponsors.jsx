@@ -25,7 +25,7 @@ function Sponsors() {
       <div className="sponsors-bronze-logos">
         <a
             className="ting-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://www.ting.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -34,7 +34,7 @@ function Sponsors() {
 
         <a
             className="simon-computing-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://www.simoncomputing.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ function Sponsors() {
 
         <a
             className="costar-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://www.costargroup.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -52,7 +52,7 @@ function Sponsors() {
 
         <a
             className="nord-vpn-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://nordvpn.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -61,7 +61,7 @@ function Sponsors() {
 
         <a
             className="nord-pass-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://nordpass.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -70,7 +70,7 @@ function Sponsors() {
 
         <a
             className="coveron-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://coveron.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -79,7 +79,7 @@ function Sponsors() {
 
         <a
             className="incogni-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://incogni.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -88,7 +88,7 @@ function Sponsors() {
 
         <a
             className="saily-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://saily.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -97,7 +97,7 @@ function Sponsors() {
 
         <a
             className="sustainable-it-link"
-            href="https://mlh.link/MLH-PureButtons-hackathons"
+            href="https://sustainability.virginia.edu/"
             target="_blank"
             rel="noopener noreferrer"
           >
