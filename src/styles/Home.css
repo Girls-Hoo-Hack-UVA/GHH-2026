@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 #home {
   padding: 0;
@@ -9,24 +9,15 @@
 }
 
 
-.image-row {
+.hack-to-moon img {
   position: absolute;
-  width: 145%;
+  width: min(100%, 1700px);
+  height: auto;
   left: 50%;
   transform: translateX(-50%);
-  top: -39vw;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.image-row img {
-  width: 100%;
-  height: auto;
-  max-width: none;
+  top: clamp(9rem, 12vw, 11rem);
   display: block;
+  z-index: 1;
 }
 
 .text-row {
@@ -46,6 +37,7 @@
     font-family: 'Space Mono', monospace;
     font-size: clamp(14px, 1.4vw, 20px);
     color: white;
+    z-index: 2;
 }
 
 .GHH2026-text {
@@ -61,14 +53,16 @@
 }
 
 .date-text {
-    position: relative;
-    top: -28vh;
+    position: absolute;
+    top: calc(var(--navbar-height) + 1.5rem);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    text-align: center;
     font-family: 'Space Mono', monospace;
     font-size: clamp(14px, 2.5vh, 24px);
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .moon-picture {
@@ -78,6 +72,7 @@
     transform: translateX(-50%);
     width: 30%;
     height: auto;
+    z-index: 0;
 }
 
 .hand-picture {
@@ -100,3 +95,68 @@ body::after {
   pointer-events: none;
   z-index: 9999;
 }
+
+
+@media (max-width: 700px) {
+  .hack-to-moon img {
+    width: min(calc(100% - 2rem), 460px);
+    top: clamp(8rem, 17vh, 10rem);
+  }
+
+  .text-row {
+    top: max(64vh, 23rem);
+    padding: 0 4vw;
+    font-size: clamp(12px, 2.5vh, 20px);
+    color: #0c1014;
+    font-style: bold;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    text-align: center;
+  }
+
+  .GHH2026-text {
+    font-size: clamp(10px, 2vh, 20px);
+    text-align: center;
+    font-weight: 600;
+    color: #090a0c;
+    text-shadow:
+        0 0 18px #ffffff;
+  }
+
+  .moon-picture {
+    top: 25vh;
+    width: 200%;
+    z-index: -9999;
+  }
+
+  .hand-picture {
+    display: none;
+  }
+
+  .date-text {
+    font-size: clamp(10px, 1.4vh, 20px);
+  }
+
+  .seventh-text, .annual-text {
+    margin-left: 4vw;
+    margin-right: auto;
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(2.3rem, 7.5vw, 7.4rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #090a0c;
+    text-shadow:
+        0 0 18px #ffffff;
+  }
+
+  .right-text {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+}
+

@@ -1,4 +1,5 @@
-import HackToMoon from "./assets/fulltext.svg"
+import HackToMoon from "./assets/fulltext.webp"
+import MobileText from "./assets/mobiletext.webp"
 import MoonPic from "./assets/moonpic.svg"
 import Hand from "./assets/hand.svg"
 import "../../styles/Home.css";
@@ -6,12 +7,12 @@ import "../../styles/Home.css";
 function Home() {
   return (
     <section className="section" id="home">
-
       <p className="date-text">October 17-18, 2026 · Charlottesville, VA</p>
 
-      <div className="image-row">
+      <picture className="hack-to-moon">
+        <source media="(max-width: 700px)" srcSet={MobileText} />
         <img src={HackToMoon} alt="Hack to the Moon" />
-      </div>
+      </picture>
 
        <div className="text-row">
           <p className="GHH2026-text">Girls Hoo Hack 2026</p>

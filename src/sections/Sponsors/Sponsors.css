@@ -45,7 +45,7 @@
     width: min(220px, 60vw);
     height: auto;
 }
- 
+
 .costar-link img, .nord-vpn-link img, .nord-pass-link img, .incogni-link img, .coveron-link img, .saily-link img {
     filter: brightness(0) invert(1);
 }

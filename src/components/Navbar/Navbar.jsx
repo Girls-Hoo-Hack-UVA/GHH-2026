@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import "../../styles/Navbar.css";
-import GHHlogo from "./assets/GHHlogo.png";
-import girlshoohack from "./assets/girlshoohack.svg";
 
 function Navbar() {
     const [hidden, setHidden] = useState(false);
-    const [hovered, setHovered] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         let lastScrollY = window.scrollY;
@@ -36,14 +34,21 @@ function Navbar() {
         };
     }, []);
 
+    useEffect(() => {
+        const handleEscape = (event) => {
+            if (event.key === "Escape") setMenuOpen(false);
+        };
+
+        window.addEventListener("keydown", handleEscape);
+        return () => window.removeEventListener("keydown", handleEscape);
+    }, []);
+
     const handleMouseEnter = () => {
-        setHovered(true);
         setHidden(false);
     };
 
     const handleMouseLeave = () => {
-        setHovered(false); // If we're scrolled down, allow navbar to hide again 
-        if (window.scrollY > 10) {
+        if (!menuOpen && window.scrollY > 10) {
             setHidden(true);
         }
     };
@@ -57,13 +62,10 @@ function Navbar() {
             />
 
             <nav
-                className={`navbar-content ${hidden ? "hidden" : ""}`}
+                className={`navbar-content ${hidden && !menuOpen ? "hidden" : ""}`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                {/* <img src={GHHlogo} alt="GHH Logo" className="logo" /> */}
-                {/* <img src={girlshoohack} alt="Girls Hoo Hack" className="ghh-text" /> */}
-
                 <a
                     href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
                     target="_blank"
@@ -76,13 +78,25 @@ function Navbar() {
                     />
                 </a>
 
-                <div className="nav-links">
-                    <a href="#home">home</a>
-                    <a href="#what-is-ghh">about</a>
-                    <a href="#schedule">schedule</a>
-                    <a href="#faq">faq</a>
-                    <a href="#sponsors">sponsors</a>
-                    <a href="#footer">contact</a>
+                <button
+                    className="menu-toggle"
+                    type="button"
+                    aria-expanded={menuOpen}
+                    aria-controls="primary-nav-links"
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
+                    onClick={() => { setMenuOpen((open) => !open); setHidden(false); }}
+                >
+                    <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
+                </button>
+
+                <div className={`nav-links ${menuOpen ? "open" : ""}`} id="primary-nav-links">
+                    <a href="#home" onClick={() => setMenuOpen(false)}>home</a>
+                    <a href="#what-is-ghh" onClick={() => setMenuOpen(false)}>about</a>
+                    <a href="#schedule" onClick={() => setMenuOpen(false)}>schedule</a>
+                    <a href="#faq" onClick={() => setMenuOpen(false)}>faq</a>
+                    <a href="#sponsors" onClick={() => setMenuOpen(false)}>sponsors</a>
+                    <a href="#footer" onClick={() => setMenuOpen(false)}>contact</a>
+                    <a className="nav-mlh-link" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Major League Hacking</a>
                 </div>
 
                 <button
