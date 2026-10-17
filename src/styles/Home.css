@@ -9,23 +9,15 @@
 }
 
 
-.hack-to-moon-desktop {
+.hack-to-moon img {
   position: absolute;
-  width: 145%;
+  width: min(100%, 1700px);
   height: auto;
-  max-width: none;
   left: 50%;
   transform: translateX(-50%);
-  top: -39vw;
-  overflow: hidden;
+  top: clamp(9rem, 12vw, 11rem);
   display: block;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.hack-to-moon-mobile {
-  display: none;
+  z-index: 1;
 }
 
 .text-row {
@@ -45,6 +37,7 @@
     font-family: 'Space Mono', monospace;
     font-size: clamp(14px, 1.4vw, 20px);
     color: white;
+    z-index: 2;
 }
 
 .GHH2026-text {
@@ -60,14 +53,16 @@
 }
 
 .date-text {
-    position: relative;
-    top: -28vh;
+    position: absolute;
+    top: calc(var(--navbar-height) + 1.5rem);
     left: 50%;
     transform: translateX(-50%);
+    z-index: 2;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    text-align: center;
     font-family: 'Space Mono', monospace;
     font-size: clamp(14px, 2.5vh, 24px);
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .moon-picture {
@@ -77,6 +72,7 @@
     transform: translateX(-50%);
     width: 30%;
     height: auto;
+    z-index: 0;
 }
 
 .hand-picture {
@@ -101,22 +97,14 @@ body::after {
 }
 
 
-@media (max-width: 480px) {
-  .hack-to-moon-mobile {
-    display: block;
-    position: absolute;
-    width: 175vw;
-    left: 52%;
-    transform: translateX(-50%);
-    top: 0vh;
-  }
-
-  .hack-to-moon-desktop {
-    display: none;
+@media (max-width: 700px) {
+  .hack-to-moon img {
+    width: min(calc(100% - 2rem), 460px);
+    top: clamp(8rem, 17vh, 10rem);
   }
 
   .text-row {
-    top: 60vh;
+    top: max(64vh, 23rem);
     padding: 0 4vw;
     font-size: clamp(12px, 2.5vh, 20px);
     color: #0c1014;
@@ -147,7 +135,6 @@ body::after {
   }
 
   .date-text {
-    top: -35vh;
     font-size: clamp(10px, 1.4vh, 20px);
   }
 

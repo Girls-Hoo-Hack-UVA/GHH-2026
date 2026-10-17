@@ -135,7 +135,7 @@
     bottom: 2%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
     .what-is-ghh {
         padding: 5rem 5vw 4rem;
     }
@@ -154,7 +154,7 @@
         line-height: 0.9;
         align-items: center;
         text-align: center;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     .ghh-intro {

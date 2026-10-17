@@ -168,3 +168,70 @@
         0 0 8px rgba(255, 170, 114, 0.8),
         0 0 16px rgba(255, 255, 255, 0.5);
 }
+
+.menu-toggle,
+.nav-links .nav-mlh-link {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    :root {
+        --navbar-height: 72px;
+    }
+
+    .navbar-content {
+        padding: 0 16px;
+        background: #090a14;
+    }
+
+    .mlh-badge {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        border-radius: 8px;
+        background: transparent;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .register-button {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        transform: none;
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 20px 16px;
+        background: #090a14;
+        box-shadow: 0 16px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a,
+    .nav-links .nav-mlh-link {
+        display: block;
+        padding: 12px 4px;
+        font-size: 17px;
+    }
+}
