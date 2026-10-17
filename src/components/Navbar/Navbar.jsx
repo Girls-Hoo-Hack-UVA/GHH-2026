@@ -92,9 +92,9 @@ function Navbar() {
                 <div className={`nav-links ${menuOpen ? "open" : ""}`} id="primary-nav-links">
                     <a href="#home" onClick={() => setMenuOpen(false)}>home</a>
                     <a href="#what-is-ghh" onClick={() => setMenuOpen(false)}>about</a>
-                    <a href="#holder" onClick={() => setMenuOpen(false)}>schedule</a>
+                    <a href="#schedule" onClick={() => setMenuOpen(false)}>schedule</a>
                     <a href="#faq" onClick={() => setMenuOpen(false)}>faq</a>
-                    <a href="#holder" onClick={() => setMenuOpen(false)}>sponsors</a>
+                    <a href="#sponsors" onClick={() => setMenuOpen(false)}>sponsors</a>
                     <a href="#footer" onClick={() => setMenuOpen(false)}>contact</a>
                     <a className="nav-mlh-link" href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Major League Hacking</a>
                 </div>

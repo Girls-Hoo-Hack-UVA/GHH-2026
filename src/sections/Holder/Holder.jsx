@@ -11,8 +11,7 @@ function Holder() {
 
                 <p className="schedule-sponsors-message">
                     We're still putting the finishing touches on Girls Hoo Hack 2026.
-                    Check back soon for the full hackathon schedule and our amazing
-                    sponsors!
+                    Check back soon for the full hackathon schedule!
                 </p>
             </div>
         </section>
